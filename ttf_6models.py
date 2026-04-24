@@ -15,7 +15,7 @@
 TRAIN_END = '2025-01-01'
 TEST_START = '2025-01-01'
 TEST_END = '2025-06-01'
-CSV_PRICES = r'C:\Users\Pc_Lenovo\Desktop\TTF\ttf_forward1.csv'     #save the csv file and specify the path here
+CSV_PRICES =     #save the csv file and specify the path here
 N_PATHS = 1000
 SEED = 42
 
