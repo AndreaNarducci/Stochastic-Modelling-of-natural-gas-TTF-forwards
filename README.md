@@ -191,28 +191,15 @@ Hidden Markov Model (HMM) on price levels; partially explored in this project
 
 **2. Stochastic parameters**
 
-Stochastic drift μ via particle filter; more robust than linear Kalman filter on regime-switching series, motivated by the comparison with Heston model estimation approaches
-Two-factor Schwartz-Smith (1997) model; decomposes log-price into long-run equilibrium and short-run deviation, calibrated on the full forward curve via Kalman filter
+Stochastic drift μ via particle filter;
 
-**3. Distributional extensions**
+**3. Exogenous regressors**
 
-GARCH with NIG (Normal Inverse Gaussian) innovations, more flexible than t-Student, independently parametrises skewness and tail heaviness
-CEV (Constant Elasticity of Variance), price-level dependent volatility, relevant for commodity markets
+Weekly/monthly aggregation of HDD and storage deviation; daily regressors showed no significance (p > 0.48)
 
-**4. Exogenous regressors**
+**5. Term structure**
 
-Weekly/monthly aggregation of HDD and storage deviation; daily regressors showed no significance (p > 0.48), lower frequency may recover predictive power
-LNG import flows and pipeline interconnection variables
-
-**5. Evaluation framework**
-
-Diebold-Mariano test for formal statistical comparison between models
-Probability Integral Transform (PIT) histogram for calibration diagnostics, complementary to CRPS
-Walk-forward validation instead of single train/test split
-
-**6. Term structure**
-
-Extension to the full forward curve multi-factor model calibrated across all maturities, required for derivatives pricing beyond the front-month contract
+Extension to the full forward curve multi-factor model calibrated across all maturities
 ## Author
 
 Andrea Narducci, BSc Industrial Engineering, MSc Chemical Engineering
