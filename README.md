@@ -188,20 +188,16 @@ pip install numpy pandas scipy matplotlib scikit-learn
 ---
 ## Future Research Direction
 
-**1. Regime switching**
 
-Markov Switching GARCH (MS-GARCH); explicitly models transitions between low and high volatility regimes, resolves fake persistence
-Hidden Markov Model (HMM) on price levels; partially explored in this project
-
-**2. Stochastic parameters**
+**1. Stochastic parameters**
 
 Stochastic drift μ via particle filter;
 
-**3. Exogenous regressors**
+**2. Exogenous regressors**
 
 Weekly/monthly aggregation of HDD and storage deviation; daily regressors showed no significance (p > 0.48)
 
-**5. Term structure**
+**3. Term structure**
 
 Extension to the full forward curve multi-factor model calibrated across all maturities
 ## Author
