@@ -29,7 +29,7 @@ ttf-stochastic-modelling/
 All three models are based on the Ornstein–Uhlenbeck process in continuous time:
 
 ```
-<img width="237" height="65" alt="image" src="https://github.com/user-attachments/assets/bcd600d9-c609-4a44-afc6-542f8c978be8" />
+<img width="237" height="65" alt="image" src="https://github.com/user-attachments/assets/4ee0f087-eb87-4862-9cd8-525f15f90a10" />
 
 ```
 
