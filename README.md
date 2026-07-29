@@ -28,10 +28,9 @@ ttf-stochastic-modelling/
 
 All three models are based on the Ornstein–Uhlenbeck process in continuous time:
 
-```
+
 <img width="237" height="65" alt="image" src="https://github.com/user-attachments/assets/4ee0f087-eb87-4862-9cd8-525f15f90a10" />
 
-```
 
 with exact discrete-time transition variance `σ²_r = σ²/(2κ) · (1 − exp(−2κΔt))`.
 
