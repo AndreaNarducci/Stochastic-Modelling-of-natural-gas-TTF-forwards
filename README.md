@@ -4,7 +4,7 @@ A quantitative framework for modelling and forecasting TTF natural gas front-mon
 
 ## Motivation
 
-Natural gas prices exhibit two main dynamics: mean-reversion toward an equilibrium price driven by storage and supply fundamentals, and volatility clustering where large shocks are followed by further large shocks (memory). The 2021 to 2022 European energy crisis was responsible for an abrupt change of the price structure and dynamics.
+Natural gas prices exhibit two main dynamics: mean-reversion toward an equilibrium price driven by storage and supply fundamentals, and volatility clustering where large shocks are followed by further large shocks (memory). The 2021 to 2022 European energy crisis was responsible for an abrupt change of the price level and dynamics.
 
 I investigate which family of stochastic models better describes TTF price dynamics, and how does the answer change across different market regimes
 
@@ -60,15 +60,19 @@ All fitted via MLE on log-returns using L-BFGS-B (GARCH) or Nelder-Mead (EGARCH)
 
 The Continuous Ranked Probability Score (Gneiting & Raftery 2007) is a proper scoring rule for distributional forecasts:
 
-CRPS(F, y) = E_F|X − y| − 0.5* E_F|X − X'|
+<img width="515" height="80" alt="image" src="https://github.com/user-attachments/assets/c8a729cc-5117-4c9c-bf5d-4164b9724f7c" />
+
 
 Where the original closed form expression involves the integration on R of the quadratic difference of the cumulative distribution function and the Heavside on the observed price (x); this expression is analogous to the one above as for Gneiting & Raftery 2007.
+<img width="744" height="180" alt="image" src="https://github.com/user-attachments/assets/7cac7091-c1d9-4d29-8cd7-82f527bdb27d" />
+
 
 All six models are evaluated on one-step-ahead log-return CRPS, with the predictive distribution re-conditioned to the observed price each day. This guarantees strict comparability across both models families (mean reverting vs random walk)
 
-For Gaussian predictive distributions the CRPS has a closed form (Gneiting & Raftery 2007, eq. 21):
+For Gaussian predictive distributions the CRPS has a closed form involving the cumulative distribution function evaluated at x.
 
-CRPS = σ · [z(2Φ(z)−1) + 2φ(z) − 1/√π],    z = (y − μ)/σ
+
+
 
 
 For GARCH-t (non-Gaussian predictive) an ensemble estimator with 10,000 draws per step is used, converging to the true CRPS at rate for large number of simulations.
