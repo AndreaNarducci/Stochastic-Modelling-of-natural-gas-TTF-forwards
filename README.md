@@ -24,12 +24,13 @@ ttf-stochastic-modelling/
 ---
 ## Models
 
-### OU Family — Mean-Reverting
+### OU Family, Mean-Reverting
 
 All three models are based on the Ornstein–Uhlenbeck process in continuous time:
 
 ```
-dY_t = κ(μ_t − Y_t) dt + σ dW_t
+<img width="237" height="65" alt="image" src="https://github.com/user-attachments/assets/bcd600d9-c609-4a44-afc6-542f8c978be8" />
+
 ```
 
 with exact discrete-time transition variance `σ²_r = σ²/(2κ) · (1 − exp(−2κΔt))`.
@@ -42,7 +43,7 @@ with exact discrete-time transition variance `σ²_r = σ²/(2κ) · (1 − exp(
 
 Fitted via OLS (M1, M2) and MLE (GARCH component) on log-prices.
 
-### GARCH Family — Random Walk
+### GARCH Family, Random Walk
 
 All three models assume log-prices follow a random walk with time-varying conditional variance. No mean-reversion.
 
@@ -77,7 +78,7 @@ For Gaussian predictive distributions the CRPS has a closed form involving the c
 
 For GARCH-t (non-Gaussian predictive) an ensemble estimator with 10,000 draws per step is used, converging to the true CRPS at rate for large number of simulations.
 
-### Path-Based Metrics — Secondary
+### Path-Based Metrics, Secondary
 
 RMSE, MAE and 5–95% interval coverage are computed on the median of 1,000 Monte Carlo paths. They are meaningful only for short test windows (< 60 business days), due to the unbounded nature of the variance with respect to time for random-walk based models (all GARCHs in this section), the coverage will asymptotically converge to 100% and be extremely conservative (thus another point to it being not a good indicator on the long run). Moreover over long periods the comparability across the two family of models ceases in terms of significance as mean reverting variance converges to the (diffusion parameter)/2*k.
 
