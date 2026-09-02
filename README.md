@@ -87,10 +87,10 @@ RMSE, MAE and 5–95% interval coverage are computed on the median of 1,000 Mont
 
 Running `ttf_6models.py` produces four figures:
 
-- **fig1_ou_family.png** — fan charts for OU M1, OU M2, OU M2+GARCH
-- **fig2_garch_family.png** — fan charts for GARCH-Gaussian, GARCH-t, EGARCH
-- **fig3_crps_time.png** — one-step CRPS over the test period, by family
-- **fig4_tables.png** — unified results table + model parameters table
+- **fig1_ou_family.png**: fan charts for OU M1, OU M2, OU M2+GARCH
+- **fig2_garch_family.png**: fan charts for GARCH-Gaussian, GARCH-t, EGARCH
+- **fig3_crps_time.png**: one-step CRPS over the test period, by family
+- **fig4_tables.png**: unified results table + model parameters table
 
 Running `ttf_statistics.py` produces a five-panel EDA figure:
 - Historical price series
